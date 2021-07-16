@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ColorBlock" id="colorBlock"></div>
+</body>
+
+<style>
+    .ColorBlock{
+        background-color: black;
+        height: 10cm;
+        width: 10cm;
+    }
+</style>
+
+<script>
+    let colorChanged = false;
+    setInterval(() => {
+        document.getElementById('colorBlock').style.backgroundColor = colorChanged?'white':'black';
+        colorChanged = !colorChanged;
+    }, 1000);
+</script>
+
+</html>
